@@ -13,7 +13,7 @@ import java.awt.Toolkit;
 public class Eliminar extends javax.swing.JFrame {
 
     public Image getIconImage() {
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/logo_cine.png"));
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/logo_emp2.png"));
 
 
         return retValue;

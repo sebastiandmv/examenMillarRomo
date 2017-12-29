@@ -295,4 +295,25 @@ public class Modelo extends JFrame {
             JOptionPane.showMessageDialog(this, "Algo falló");
         }
     }
+     
+     public boolean ModificarSueldos() throws ClassNotFoundException, SQLException {
+        con = new Conexion();
+        try {
+
+            String query = " update empleados set  sueldo_bruto=sueldo_bruto*1.1";
+            PreparedStatement stmt = con.connect().prepareStatement(query);
+
+            
+
+            stmt.executeUpdate();
+            System.out.println("Se ha aumentado un 10% a todos los sueldos.");
+            con.disconnect();
+            JOptionPane.showMessageDialog(this, "Se ha aumentado un 10% a todos los sueldos.");
+            return true;
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+            JOptionPane.showMessageDialog(this, "Algo falló");
+            return false;
+        }
+     }
 }

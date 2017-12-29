@@ -15,6 +15,20 @@ import java.awt.Toolkit;
 public class Listar extends javax.swing.JFrame {
 
     /**
+     * @return the jConsulta4
+     */
+    public javax.swing.JRadioButton getjConsulta4() {
+        return jConsulta4;
+    }
+
+    /**
+     * @param jConsulta4 the jConsulta4 to set
+     */
+    public void setjConsulta4(javax.swing.JRadioButton jConsulta4) {
+        this.jConsulta4 = jConsulta4;
+    }
+
+    /**
      * @return the buttonGroup1
      */
     public javax.swing.ButtonGroup getButtonGroup1() {
@@ -99,7 +113,7 @@ public class Listar extends javax.swing.JFrame {
     }
 
     public Image getIconImage() {
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/logo_cine.png"));
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/logo_emp2.png"));
 
 
         return retValue;
@@ -130,6 +144,7 @@ public class Listar extends javax.swing.JFrame {
         jComentarios = new javax.swing.JLabel();
         jConsulta2 = new javax.swing.JRadioButton();
         jConsulta3 = new javax.swing.JRadioButton();
+        jConsulta4 = new javax.swing.JRadioButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jAgregar = new javax.swing.JMenu();
         jListar = new javax.swing.JMenu();
@@ -171,6 +186,9 @@ public class Listar extends javax.swing.JFrame {
         buttonGroup1.add(jConsulta3);
         jConsulta3.setText("3");
 
+        buttonGroup1.add(jConsulta4);
+        jConsulta4.setText("4");
+
         jAgregar.setText("Agregar");
         jMenuBar2.add(jAgregar);
 
@@ -203,6 +221,8 @@ public class Listar extends javax.swing.JFrame {
                         .addComponent(jConsulta2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jConsulta3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jConsulta4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jDepto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -210,13 +230,18 @@ public class Listar extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jDepto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jEjecutarConsulta)
-                    .addComponent(jConsulta1)
-                    .addComponent(jConsulta2)
-                    .addComponent(jConsulta3))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jDepto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jEjecutarConsulta)
+                            .addComponent(jConsulta1)
+                            .addComponent(jConsulta2)
+                            .addComponent(jConsulta3)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jConsulta4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jComentarios)
                 .addGap(9, 9, 9)
@@ -270,6 +295,7 @@ public class Listar extends javax.swing.JFrame {
     private javax.swing.JRadioButton jConsulta1;
     private javax.swing.JRadioButton jConsulta2;
     private javax.swing.JRadioButton jConsulta3;
+    private javax.swing.JRadioButton jConsulta4;
     private javax.swing.JComboBox<String> jDepto;
     private javax.swing.JButton jEjecutarConsulta;
     private javax.swing.JMenu jEliminar;
