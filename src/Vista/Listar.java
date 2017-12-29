@@ -14,6 +14,48 @@ import java.awt.Toolkit;
  */
 public class Listar extends javax.swing.JFrame {
 
+    /**
+     * @return the jComentarios
+     */
+    public javax.swing.JLabel getjComentarios() {
+        return jComentarios;
+    }
+
+    /**
+     * @param jComentarios the jComentarios to set
+     */
+    public void setjComentarios(javax.swing.JLabel jComentarios) {
+        this.jComentarios = jComentarios;
+    }
+
+    /**
+     * @return the jConsulta1
+     */
+    public javax.swing.JRadioButton getjConsulta1() {
+        return jConsulta1;
+    }
+
+    /**
+     * @param jConsulta1 the jConsulta1 to set
+     */
+    public void setjConsulta1(javax.swing.JRadioButton jConsulta1) {
+        this.jConsulta1 = jConsulta1;
+    }
+
+    /**
+     * @return the jEjecutarConsulta
+     */
+    public javax.swing.JButton getjEjecutarConsulta() {
+        return jEjecutarConsulta;
+    }
+
+    /**
+     * @param jEjecutarConsulta the jEjecutarConsulta to set
+     */
+    public void setjEjecutarConsulta(javax.swing.JButton jEjecutarConsulta) {
+        this.jEjecutarConsulta = jEjecutarConsulta;
+    }
+
     public Image getIconImage() {
         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/logo_cine.png"));
 
@@ -40,6 +82,9 @@ public class Listar extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         TblMostrar = new javax.swing.JTable();
         jDepto = new javax.swing.JComboBox<>();
+        jEjecutarConsulta = new javax.swing.JButton();
+        jConsulta1 = new javax.swing.JRadioButton();
+        jComentarios = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
         jAgregar = new javax.swing.JMenu();
         jListar = new javax.swing.JMenu();
@@ -67,6 +112,13 @@ public class Listar extends javax.swing.JFrame {
 
         jDepto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mostrar Todos", "Informática", "Redes", "Administración", "Finanzas y Bienestar" }));
 
+        jEjecutarConsulta.setText("Ejecutar Consulta");
+
+        jConsulta1.setText("1");
+
+        jComentarios.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jComentarios.setText(" ");
+
         jAgregar.setText("Agregar");
         jMenuBar2.add(jAgregar);
 
@@ -89,18 +141,27 @@ public class Listar extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComentarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jEjecutarConsulta)
+                        .addGap(18, 18, 18)
+                        .addComponent(jConsulta1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jDepto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jDepto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jDepto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jEjecutarConsulta)
+                    .addComponent(jConsulta1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComentarios)
+                .addGap(9, 9, 9)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -146,7 +207,10 @@ public class Listar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TblMostrar;
     private javax.swing.JMenu jAgregar;
+    private javax.swing.JLabel jComentarios;
+    private javax.swing.JRadioButton jConsulta1;
     private javax.swing.JComboBox<String> jDepto;
+    private javax.swing.JButton jEjecutarConsulta;
     private javax.swing.JMenu jEliminar;
     private javax.swing.JMenu jListar;
     private javax.swing.JMenuBar jMenuBar2;

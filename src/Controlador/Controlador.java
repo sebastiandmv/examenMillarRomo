@@ -71,6 +71,8 @@ public class Controlador extends JFrame implements ActionListener, MenuListener{
         listar.getjModificar().addMenuListener(this);
         actualizarMostrar();
         listar.getjDepto().addActionListener(this);
+        listar.getjEjecutarConsulta().addActionListener(this);
+        listar.getjConsulta1().addActionListener(this);
 
     }
     
@@ -148,6 +150,29 @@ public class Controlador extends JFrame implements ActionListener, MenuListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
+        
+        if(listar.getjConsulta1()==e.getSource()){
+            listar.getjComentarios().setText("Botón limpiar se agrega. Al limpiar, el cursor queda en la primera casilla.");
+        }
+        
+        
+        
+        if (listar.getjEjecutarConsulta() == e.getSource()) {
+            
+            if(listar.getjConsulta1().isSelected()){
+                agregar.setVisible(true);
+                listar.setVisible(false);
+            }
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        
         
         if (listar.getjDepto()== e.getSource()) {
             actualizarMostrar();
