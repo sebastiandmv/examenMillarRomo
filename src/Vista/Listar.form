@@ -64,6 +64,8 @@
                       <Component id="jConsulta1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jConsulta2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jConsulta3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jDepto" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -81,6 +83,7 @@
                   <Component id="jEjecutarConsulta" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jConsulta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jConsulta2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jConsulta3" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jComentarios" min="-2" max="-2" attributes="0"/>
@@ -165,6 +168,14 @@
           <ComponentRef name="buttonGroup1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="jConsulta3">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="buttonGroup1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="3"/>
       </Properties>
     </Component>
   </SubComponents>

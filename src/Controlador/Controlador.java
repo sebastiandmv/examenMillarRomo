@@ -150,9 +150,7 @@ public class Controlador extends JFrame implements ActionListener, MenuListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        
-        
-        
+              
         
         if (listar.getjEjecutarConsulta() == e.getSource()) {
             
@@ -164,13 +162,19 @@ public class Controlador extends JFrame implements ActionListener, MenuListener{
             if(listar.getjConsulta2().isSelected()){
                 listar.getjDepto().setSelectedItem("Redes");
             }
+            
+            if(listar.getjConsulta3().isSelected()){
+                try {
+                    m.Eliminar120();
+                    actualizarMostrar();
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
         }
-        
-        
-        
-        
-        
-        
+         
         
         
         if (listar.getjDepto()== e.getSource()) {

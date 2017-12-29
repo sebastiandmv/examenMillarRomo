@@ -277,4 +277,22 @@ public class Modelo extends JFrame {
         }
         return tablemodel;
     }
+     
+     public void Eliminar120() throws ClassNotFoundException, SQLException {
+        con = new Conexion();
+        try {
+
+            String query = " delete from empleados where sueldo_bruto=120000";
+            PreparedStatement stmt = con.connect().prepareStatement(query);
+          
+
+            stmt.executeUpdate();
+            System.out.println("Los empleados con sueldo bruto igual a $120.000 fueron eliminados");
+            con.disconnect();
+            JOptionPane.showMessageDialog(this, "Los empleados con sueldo bruto igual a $120.000 fueron eliminados");
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+            JOptionPane.showMessageDialog(this, "Algo falló");
+        }
+    }
 }
