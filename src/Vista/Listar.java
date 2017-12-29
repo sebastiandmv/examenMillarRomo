@@ -15,6 +15,20 @@ import java.awt.Toolkit;
 public class Listar extends javax.swing.JFrame {
 
     /**
+     * @return the jConsulta2
+     */
+    public javax.swing.JRadioButton getjConsulta2() {
+        return jConsulta2;
+    }
+
+    /**
+     * @param jConsulta2 the jConsulta2 to set
+     */
+    public void setjConsulta2(javax.swing.JRadioButton jConsulta2) {
+        this.jConsulta2 = jConsulta2;
+    }
+
+    /**
      * @return the jComentarios
      */
     public javax.swing.JLabel getjComentarios() {
@@ -79,12 +93,14 @@ public class Listar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jScrollPane1 = new javax.swing.JScrollPane();
         TblMostrar = new javax.swing.JTable();
         jDepto = new javax.swing.JComboBox<>();
         jEjecutarConsulta = new javax.swing.JButton();
         jConsulta1 = new javax.swing.JRadioButton();
         jComentarios = new javax.swing.JLabel();
+        jConsulta2 = new javax.swing.JRadioButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jAgregar = new javax.swing.JMenu();
         jListar = new javax.swing.JMenu();
@@ -114,10 +130,14 @@ public class Listar extends javax.swing.JFrame {
 
         jEjecutarConsulta.setText("Ejecutar Consulta");
 
+        buttonGroup1.add(jConsulta1);
         jConsulta1.setText("1");
 
         jComentarios.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jComentarios.setText(" ");
+
+        buttonGroup1.add(jConsulta2);
+        jConsulta2.setText("2");
 
         jAgregar.setText("Agregar");
         jMenuBar2.add(jAgregar);
@@ -147,6 +167,8 @@ public class Listar extends javax.swing.JFrame {
                         .addComponent(jEjecutarConsulta)
                         .addGap(18, 18, 18)
                         .addComponent(jConsulta1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jConsulta2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jDepto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -158,12 +180,13 @@ public class Listar extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jDepto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jEjecutarConsulta)
-                    .addComponent(jConsulta1))
+                    .addComponent(jConsulta1)
+                    .addComponent(jConsulta2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jComentarios)
                 .addGap(9, 9, 9)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
@@ -206,9 +229,11 @@ public class Listar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TblMostrar;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JMenu jAgregar;
     private javax.swing.JLabel jComentarios;
     private javax.swing.JRadioButton jConsulta1;
+    private javax.swing.JRadioButton jConsulta2;
     private javax.swing.JComboBox<String> jDepto;
     private javax.swing.JButton jEjecutarConsulta;
     private javax.swing.JMenu jEliminar;

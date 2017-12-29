@@ -151,9 +151,6 @@ public class Controlador extends JFrame implements ActionListener, MenuListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         
-        if(listar.getjConsulta1()==e.getSource()){
-            listar.getjComentarios().setText("Botón limpiar se agrega. Al limpiar, el cursor queda en la primera casilla.");
-        }
         
         
         
@@ -164,7 +161,9 @@ public class Controlador extends JFrame implements ActionListener, MenuListener{
                 listar.setVisible(false);
             }
             
-            
+            if(listar.getjConsulta2().isSelected()){
+                listar.getjDepto().setSelectedItem("Redes");
+            }
         }
         
         
